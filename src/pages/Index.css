@@ -277,7 +277,6 @@
   }
   
   /* ===== Responsive Design ===== */
-
   @media screen and (max-width: 768px) {
     .menu-toggle {
       display: flex;
@@ -304,22 +303,6 @@
       width: 100%;
       text-align: center;
       padding: 12px 0;
-    }
-  }
-  
-
-  @media screen and (max-width: 768px) {
-    .landing-header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      margin-top: 10px;
     }
   
     .hero {
