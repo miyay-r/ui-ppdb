@@ -1,0 +1,116 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  padding: 20px 15px;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.sidebar h5 {
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  color: #ffc863;
+  margin-bottom: 30px;
+}
+
+.sidebar-content {
+  flex: 1;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* spasi jika pakai icon */
+  padding: 10px 16px;
+  color: #ffc863;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.sidebar ul li a.active {
+  background-color: #ffffff;
+  color: #ffa600;
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 #ffa600;
+}
+
+.btn.logout {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn.logout:hover {
+  background-color: #d32f2f;
+}
+
+/* === Burger Menu Button === */
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 1100;
+  background-color: #343a40;
+  color: #ffc863;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.burger-menu:hover {
+  background-color: #495057;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+}
+
+

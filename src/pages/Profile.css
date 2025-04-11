@@ -1,0 +1,15 @@
+/* Profile.css */
+
+.profile-container {
+  margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

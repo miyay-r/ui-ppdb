@@ -1,0 +1,129 @@
+/* Pendaftaran.css */
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reg-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reg-container h2 {
+  text-align: center;
+  color: #ff9800;
+  margin-bottom: 25px;
+}
+
+.reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reg-form input,
+.reg-form textarea,
+.reg-form select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.reg-form input:focus,
+.reg-form textarea:focus,
+.reg-form select:focus {
+  border-color: #ff9800;
+  outline: none;
+}
+
+.reg-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+.btn-kembali {
+  background-color: #ddd;
+  color: #333;
+}
+
+.btn-kembali:hover {
+  background-color: #bbb;
+}
+
+.reg-message {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  color: white;
+  background-color: #4caf50;
+}
+
+@media (max-width: 600px) {
+  .reg-container {
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button,
+  .btn-kembali {
+    width: 100%;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.reg-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}

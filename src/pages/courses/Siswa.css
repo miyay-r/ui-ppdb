@@ -1,0 +1,278 @@
+/* Wrapper Tabel */
+.table-container {
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 220px; /* Jika menggunakan sidebar dengan lebar 220px */
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  color: #333;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* Tabel Responsif */
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.responsive-table th,
+.responsive-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.responsive-table th {
+  background-color: #f4a261;
+  color: white;
+}
+
+/* Tombol Umum */
+.btn {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+/* Tombol Tambah */
+.btn.tambah {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn.tambah:hover {
+  background-color: #388e3c;
+}
+
+/* Tombol Edit */
+.btn.edit {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn.edit:hover {
+  background-color: #1976d2;
+}
+
+/* Tombol Delete */
+.btn.delete {
+  background-color: #e76f51;
+  color: white;
+}
+
+.btn.delete:hover {
+  background-color: #c4452c;
+}
+
+/* Tombol Submit & Cancel */
+.btn.submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn.submit:hover {
+  background-color: #388e3c;
+}
+
+.btn.cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn.cancel:hover {
+  background-color: #d32f2f;
+}
+
+/* Search */
+.search-wrapper {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+  max-width: 100%;
+  font-size: 14px;
+}
+
+/* Top Bar (Search + Button Tambah) */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 220px; /* jika sidebar fixed di kiri */
+  width: calc(100% - 220px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Modal Form */
+.modal-form input,
+.modal-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+
+.modal-form select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'10'%20height%3D'7'%20viewBox%3D'0%200%2010%207'%20fill%3D'none'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M1%201L5%205L9%201'%20stroke%3D'%23666'%20stroke-width%3D'2'%20/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 7px;
+}
+
+.modal-form select:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+/* Modal Action Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* Tambahan untuk tombol agar ukurannya konsisten dan tidak terlalu lebar */
+.modal-actions .btn {
+  min-width: 100px;
+  padding: 8px 16px;
+  font-size: 0.9em;
+  flex: none;
+}
+
+/* Responsif tombol di layar kecil */
+@media screen and (max-width: 500px) {
+  .modal-actions {
+    justify-content: center;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .table-container {
+    margin-left: 0;
+  }
+
+  .responsive-table th,
+  .responsive-table td {
+    font-size: 0.85em;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .modal-content {
+    margin: 0 10px;
+  }
+
+  .modal-overlay {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/* popup */
+.notif-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  z-index: 9999;
+  animation: fadeSlide 0.3s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tambahkan ke dalam Siswa.css */
+
+.page-number.active {
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.page-number {
+  margin: 0 4px;
+}
