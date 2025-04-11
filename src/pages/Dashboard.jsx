@@ -79,10 +79,8 @@ const Dashboard = () => {
                 <th>Nama</th>
                 <th>Alamat</th>
                 <th>Jenis Kelamin</th>
-                <th>No HP</th>
                 <th>Sekolah</th>
                 <th>Jurusan</th>
-                <th>Tanggal Lahir</th>
                 <th>NISN</th>
               </tr>
             </thead>
@@ -93,10 +91,8 @@ const Dashboard = () => {
                   <td>{siswa.nm_pendaftar}</td>
                   <td>{siswa.alamat}</td>
                   <td>{siswa.jenis_kelamin}</td>
-                  <td>{siswa.no_hp}</td>
                   <td>{siswa.asal_sekolah}</td>
                   <td>{siswa.jurusan?.toUpperCase()}</td>
-                  <td>{siswa.tgl_lahir}</td>
                   <td>{siswa.nisn}</td>
                 </tr>
               ))}
