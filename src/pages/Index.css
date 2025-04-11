@@ -1,16 +1,15 @@
 /* ===== Global Landing Page ===== */
 .landing-container {
-    font-family: "Segoe UI", sans-serif;
-  }
-  
-  /* ===== Header Default ===== */
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
 .landing-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
   background-color: #343a40;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -23,28 +22,38 @@
   color: #ff9800;
 }
 
-/* Menu Toggle Button */
-.menu-toggle {
+/* ===== Burger Icon ===== */
+.burger {
   display: none;
   flex-direction: column;
-  justify-content: center;
-  gap: 4px;
+  gap: 6px;
   cursor: pointer;
+  z-index: 1001;
 }
 
-.menu-toggle span {
+.bar {
   width: 25px;
   height: 3px;
   background-color: #fff;
   border-radius: 2px;
+  transition: 0.3s ease-in-out;
 }
 
-/* Navigation Links */
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== Navigation ===== */
 .nav-links {
   display: flex;
   gap: 25px;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a,
@@ -61,289 +70,297 @@
 .nav-admin:hover {
   color: hsl(36, 100%, 45%);
 }
-  
-  /* ===== Hero Section ===== */
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff3e0;
-    padding: 40px 30px;
-    border-radius: 16px;
-    flex-wrap: wrap;
-    color: #b35d00;
-    gap: 30px;
-  }
-  
-  .hero-text {
-    flex: 1;
-    min-width: 280px;
-  }
-  
-  .hero-text h1 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 15px;
-  }
-  
-  .hero-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .btn-daftar {
-    padding: 12px 24px;
-    background: rgb(43, 75, 255);
-    color: #ffffff;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .btn-daftar:hover {
-    background: #ffe0b2;
-    color: #333;
-  }
-  
-  .hero-image img {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  /* ===== Fasilitas Section ===== */
-  .fasilitas {
-    margin-top: 60px;
-    padding: 50px 30px;
-    background: #fff3e0;
-    border-radius: 16px;
-    text-align: center;
-  }
-  
-  .fasilitas h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #b35d00;
-    margin-bottom: 35px;
-  }
-  
-  .fasilitas-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .fasilitas-item {
-    background: #fff;
-    padding: 25px;
-    border-radius: 16px;
-    width: 280px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-    transition: 0.3s ease;
-  }
-  
-  .fasilitas-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
-  }
-  
-  .fasilitas-item img {
-    height: 100px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .fasilitas-item h4 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #b35d00;
-    margin-bottom: 10px;
-  }
-  
-  .fasilitas-item p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.5;
-  }
-  
-  /* ===== Jurusan Section ===== */
-  .jurusan {
-    margin-top: 60px;
-    padding: 50px 30px;
-    background: #fff3e0;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  }
-  
-  .jurusan h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #b35d00;
-    margin-bottom: 35px;
-  }
-  
-  .jurusan-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .jurusan-card {
-    background: #fff8ef;
-    padding: 25px;
-    border-radius: 12px;
-    width: 260px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    transition: 0.3s ease;
-  }
-  
-  .jurusan-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
-  }
-  
-  .jurusan-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #b35d00;
-    margin-bottom: 10px;
-  }
-  
-  .jurusan-card p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.4;
-  }
-  
-  /* ===== Info Section ===== */
-  .info {
-    margin: 60px auto;
-    padding: 40px 30px;
-    background: #fff3e0;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-    max-width: 700px;
-  }
-  
-  .info h2 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #b35d00;
-    margin-bottom: 20px;
-  }
-  
-  .info p {
-    font-size: 18px;
-    color: #444;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  .info strong {
-    color: #e65100;
-  }
-  
-  .info .btn-daftar {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 12px 24px;
-    background: rgb(43, 75, 255);
-    color: white;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .info .btn-daftar:hover {
-    background: hsl(36, 100%, 45%);
-    color: #fffde7;
-  }
-  
-  /* ===== Footer ===== */
-  .landing-footer {
-    text-align: center;
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff3e0;
+  padding: 40px 30px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  color: #b35d00;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-daftar {
+  padding: 12px 24px;
+  background: rgb(43, 75, 255);
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-daftar:hover {
+  background: #ffe0b2;
+  color: #333;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ===== Fasilitas Section ===== */
+.fasilitas {
+  margin-top: 60px;
+  padding: 50px 30px;
+  background: #fff3e0;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.fasilitas h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b35d00;
+  margin-bottom: 35px;
+}
+
+.fasilitas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.fasilitas-item {
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.fasilitas-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.08);
+}
+
+.fasilitas-item img {
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.fasilitas-item h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b35d00;
+  margin-bottom: 10px;
+}
+
+.fasilitas-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== Jurusan Section ===== */
+.jurusan {
+  margin-top: 60px;
+  padding: 50px 30px;
+  background: #fff3e0;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.jurusan h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #b35d00;
+  margin-bottom: 35px;
+}
+
+.jurusan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.jurusan-card {
+  background: #fff8ef;
+  padding: 25px;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.jurusan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.jurusan-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b35d00;
+  margin-bottom: 10px;
+}
+
+.jurusan-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== Info Section ===== */
+.info {
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: #fff3e0;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+}
+
+.info h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #b35d00;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.info strong {
+  color: #e65100;
+}
+
+.info .btn-daftar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: rgb(43, 75, 255);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.info .btn-daftar:hover {
+  background: hsl(36, 100%, 45%);
+  color: #fffde7;
+}
+
+/* ===== Footer ===== */
+.landing-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (max-width: 768px) {
+  .landing-header {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
     background-color: #343a40;
-    margin-top: 50px;
-    font-size: 14px;
-    color: #777;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
   }
-  
-  /* ===== Responsive Design ===== */
-  @media screen and (max-width: 768px) {
-    .menu-toggle {
-      display: flex;
-    }
-  
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-      background-color: #343a40;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-  
-    .nav-links.active {
-      max-height: 100px; /* cukup tinggi untuk semua menu */
-      margin-top: 10px;
-      padding: 10px 0;
-    }
-  
-    .nav-links a,
-    .nav-daftar,
-    .nav-admin {
-      width: 100%;
-      text-align: center;
-      padding: 12px 0;
-    }
-  
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  
-    .hero-text h1 {
-      font-size: 28px;
-    }
-  
-    .hero-text p {
-      font-size: 16px;
-    }
-  
-    .hero-image img {
-      max-width: 100%;
-      margin-top: 20px;
-    }
-  
-    .fasilitas-grid,
-    .jurusan-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .info {
-      padding: 30px 20px;
-    }
-  
-    .info h2 {
-      font-size: 22px;
-    }
-  
-    .info p {
-      font-size: 16px;
-    }
-  
-    .landing-footer {
-      font-size: 13px;
-    }
+
+  .nav-links.active {
+    max-height: 300px;
+    padding: 10px 0;
   }
-  
+
+  .nav-links a,
+  .nav-daftar,
+  .nav-admin {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .fasilitas-grid,
+  .jurusan-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    padding: 30px 20px;
+  }
+
+  .info h2 {
+    font-size: 22px;
+  }
+
+  .info p {
+    font-size: 16px;
+  }
+
+  .landing-footer {
+    font-size: 13px;
+  }
+}

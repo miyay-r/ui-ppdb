@@ -13,17 +13,24 @@ const Home = () => {
     <div className="landing-container">
       {/* HEADER */}
       <header className="landing-header">
-        <div className="logo">Alena Boarding School</div>
+      <div className="logo">Alena Boarding School</div>
 
-        {/* Navigation Links */}
-        <nav className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-          <a href="#fasilitas" onClick={toggleMenu}>Fasilitas</a>
-          <a href="#jurusan" onClick={toggleMenu}>Jurusan</a>
-          <a href="#info" onClick={toggleMenu}>Informasi</a>
-          <NavLink to="/pendaftaran" className="nav-daftar" onClick={toggleMenu}>Daftar</NavLink>
-          <NavLink to="/dashboard" className="nav-admin" onClick={toggleMenu}>Admin</NavLink>
-        </nav>
-      </header>
+      {/* Hamburger Button */}
+      <div className="burger" onClick={toggleMenu}>
+        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+      </div>
+
+      {/* Navigation Menu */}
+      <nav className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+        <a href="#fasilitas" onClick={toggleMenu}>Fasilitas</a>
+        <a href="#jurusan" onClick={toggleMenu}>Jurusan</a>
+        <a href="#info" onClick={toggleMenu}>Informasi</a>
+        <NavLink to="/pendaftaran" className="nav-daftar" onClick={toggleMenu}>Daftar</NavLink>
+        <NavLink to="/dashboard" className="nav-admin" onClick={toggleMenu}>Admin</NavLink>
+      </nav>
+    </header>
 
       {/* HERO */}
       <section className="hero">
