@@ -292,7 +292,7 @@
     }
   
     .nav-links.active {
-      max-height: 500px; /* cukup tinggi untuk semua menu */
+      max-height: 100px; /* cukup tinggi untuk semua menu */
       margin-top: 10px;
       padding: 10px 0;
     }
