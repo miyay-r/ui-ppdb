@@ -3,44 +3,64 @@
     font-family: "Segoe UI", sans-serif;
   }
   
-  /* Header */
-  .landing-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #343a40;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    flex-wrap: wrap;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 20px;
-    color: #ff9800;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-  }
-  
-  .nav-links a,
-  .nav-daftar {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover,
-  .nav-daftar:hover {
-    color: hsl(36, 100%, 45%);
-  }
+  /* ===== Header Default ===== */
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #343a40;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff9800;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a,
+.nav-daftar,
+.nav-admin {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-daftar:hover,
+.nav-admin:hover {
+  color: hsl(36, 100%, 45%);
+}
   
   /* ===== Hero Section ===== */
   .hero {
@@ -257,6 +277,37 @@
   }
   
   /* ===== Responsive Design ===== */
+
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      background-color: #343a40;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+  
+    .nav-links.active {
+      max-height: 500px; /* cukup tinggi untuk semua menu */
+      margin-top: 10px;
+      padding: 10px 0;
+    }
+  
+    .nav-links a,
+    .nav-daftar,
+    .nav-admin {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+    }
+  }
+  
+
   @media screen and (max-width: 768px) {
     .landing-header {
       flex-direction: column;
