@@ -77,7 +77,6 @@ const Dashboard = () => {
               <tr>
                 <th>No</th>
                 <th>Nama</th>
-                <th>Alamat</th>
                 <th>Jenis Kelamin</th>
                 <th>Sekolah</th>
                 <th>Jurusan</th>
@@ -89,7 +88,6 @@ const Dashboard = () => {
                 <tr key={siswa.id_pendaftar}>
                   <td>{startIndex + index + 1}</td>
                   <td>{siswa.nm_pendaftar}</td>
-                  <td>{siswa.alamat}</td>
                   <td>{siswa.jenis_kelamin}</td>
                   <td>{siswa.asal_sekolah}</td>
                   <td>{siswa.jurusan?.toUpperCase()}</td>
