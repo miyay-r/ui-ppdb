@@ -89,7 +89,7 @@ const Home = () => {
       <section className="info" id="info">
         <h2>Informasi Pendaftaran</h2>
         <p>Pendaftaran dibuka mulai <strong>1 April</strong> sampai <strong>30 Juni</strong> setiap tahun ajaran.</p>
-        <p>Silahkan registrasi untuk menjadi siswa baru PeTIK</p>
+        <p>Silahkan registrasi untuk menjadi siswa baru Alena Boarding School.</p>
         <NavLink to="/pendaftaran" className="btn-daftar">Mulai Pendaftaran</NavLink>
       </section>
 
